@@ -2,17 +2,17 @@
 
 ## Contributors 👥
 <div align="center">
-  <a href="https://github.com/chisa-dev"><img src="https://avatars.githubusercontent.com/u/44440394?s=96&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="https://github.com/DagmMesfin"><img src="https://avatars.githubusercontent.com/u/101246148?s=96&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="https://github.com/mihretgold"><img src="https://avatars.githubusercontent.com/u/102969913?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="https://github.com/enkutatash"><img src="https://avatars.githubusercontent.com/u/112767747?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="#"><img src="https://avatars.githubusercontent.com/u/112767747?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="https://github.com/resourceful-nebil"><img src="https://avatars.githubusercontent.com/u/122722078?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="https://github.com/Young19ermi"><img src="https://avatars.githubusercontent.com/u/111576904?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="https://github.com/Fasikagebrehana"><img src="https://avatars.githubusercontent.com/u/105711954?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="https://github.com/natiyeshi"><img src="https://avatars.githubusercontent.com/u/93379520?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="https://github.com/Sefukamil20R"><img src="https://avatars.githubusercontent.com/u/130300957?s=96&v=4" width="60" height="60" style="border-radius:50%"/></a>
-  <a href="https://github.com/Mihretthe"><img src="https://avatars.githubusercontent.com/u/115806991?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/chisa-dev"><img src="https://github.com/chisa-dev.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/DagmMesfin"><img src="https://github.com/DagmMesfin.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/mihretgold"><img src="https://github.com/mihretgold.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/enkutatash"><img src="https://github.com/enkutatash.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/GDSC-AASTU"><img src="https://github.com/GDSC-AASTU.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/resourceful-nebil"><img src="https://github.com/resourceful-nebil.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Young19ermi"><img src="https://github.com/Young19ermi.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Fasikagebrehana"><img src="https://github.com/Fasikagebrehana.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/natiyeshi"><img src="https://github.com/natiyeshi.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Sefukamil20R"><img src="https://github.com/Sefukamil20R.png" width="60" height="60" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Mihretthe"><img src="https://github.com/Mihretthe.png" width="60" height="60" /></a>
 </div>
 
 ## Description 📝
