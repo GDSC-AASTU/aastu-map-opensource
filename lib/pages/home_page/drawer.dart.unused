@@ -1,0 +1,240 @@
+import 'package:aastu_map/core/bloc/auth_bloc.dart';
+import 'package:aastu_map/core/bloc/auth_event.dart';
+import 'package:aastu_map/core/bloc/auth_state.dart';
+import 'package:aastu_map/core/bloc/profile_bloc.dart';
+import 'package:aastu_map/core/bloc/profile_event.dart';
+import 'package:aastu_map/core/bloc/profile_state.dart';
+
+// import '../../../assets/images/team/about_aastu.dart';
+import 'package:aastu_map/pages/about/about_aastu.dart';
+// import 'about_aastu.dart';
+
+import 'package:aastu_map/pages/places/favourite_place.dart';
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
+
+class CustomDrawer extends StatelessWidget {
+  CustomDrawer();
+
+  // Helper method to safely get display name even if firstname or lastname is null
+  String _getDisplayName(String? firstname, String? lastname) {
+    if ((firstname == null || firstname.trim().isEmpty) && 
+        (lastname == null || lastname.trim().isEmpty)) {
+      return "Anonymous User";
+    }
+    
+    final first = firstname?.trim() ?? "";
+    final last = lastname?.trim() ?? "";
+    
+    if (first.isEmpty) return last;
+    if (last.isEmpty) return first;
+    
+    return "$first $last";
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // Load profile data
+    context.read<ProfileBloc>().add(LoadProfileEvent());
+    
+    return BlocListener<AuthBloc, AuthState>(listener: (context, state) {
+      if (state is AuthUnauthenticated) {
+        // Navigate to the login screen
+        GoRouter.of(context).go("/login");
+      } else if (state is AuthError) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Logout Failed!")),
+        );
+      }
+    }, child: BlocBuilder<AuthBloc, AuthState>(builder: (context, authState) {
+      return Drawer(
+        child: Container(
+          color: Colors.white,
+          padding: EdgeInsets.only(left: 25.0),
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(vertical: 100.0),
+                  child: BlocBuilder<ProfileBloc, ProfileState>(
+                    builder: (context, state) {
+                      // Get profile data if loaded
+                      final String? profilePic = (state is ProfileLoaded) 
+                          ? (state.user.profilePic.isEmpty ? null : state.user.profilePic)
+                          : null;
+                          
+                      // Handle name with null safety
+                      final String name = state is ProfileLoaded
+                          ? _getDisplayName(state.user.firstname, state.user.lastname)
+                          : "Loading...";
+                          
+                      // Handle email with null safety
+                      final String email = state is ProfileLoaded
+                          ? state.user.isAnonymous 
+                              ? "Guest User"
+                              : state.user.email
+                          : "Loading...";
+                          
+                      return Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            radius: 25,
+                            backgroundColor: Colors.grey.shade200,
+                            backgroundImage: profilePic != null ? NetworkImage(profilePic) : null,
+                            child: profilePic == null
+                                ? Icon(Icons.person, size: 35, color: Colors.grey)
+                                : null,
+                          ),
+                          SizedBox(width: 16),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  name,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                Text(
+                                  email,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      );
+                    }
+                  ),
+                ),
+              ),
+              Expanded(
+                child: ListView(
+                  padding: EdgeInsets.zero,
+                  children: <Widget>[
+                    CustomDrawerItem(
+                      icon: Image.asset('assets/icons/home.png',
+                          width: 25, height: 25),
+                      text: 'Home',
+                      onTap: () {},
+                    ),
+                    CustomDrawerItem(
+                      icon: Image.asset('assets/icons/search.png',
+                          width: 25, height: 25),
+                      text: 'Search',
+                      onTap: () {},
+                    ),
+                    CustomDrawerItem(
+                      icon: Image.asset('assets/icons/notification.png',
+                          width: 25, height: 25),
+                      text: 'Notifications',
+                      onTap: () {},
+                    ),
+                    CustomDrawerItem(
+                      icon: Image.asset('assets/icons/settings.png',
+                          width: 25, height: 25),
+                      text: 'Settings',
+                      onTap: () {},
+                    ),
+                    CustomDrawerItem(
+                      icon: Image.asset('assets/icons/service.png',
+                          width: 25, height: 25),
+                      text: 'Support',
+                      onTap: () {},
+                    ),
+                    CustomDrawerItem(
+                      icon: Image.asset('assets/icons/info-sign.png',
+                          width: 25, height: 25),
+                      text: 'About us',
+                      onTap: () {
+                        Navigator.push(
+                        context,
+                          MaterialPageRoute(builder: (context) => AboutUs()),
+                        );
+                      },
+                    ),
+                    CustomDrawerItem(
+                      icon: Image.asset('assets/icons/star.png',
+                          width: 25, height: 25),
+                      text: 'Favourite places',
+                       onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) =>  FavoritePlacesPage(),
+      ),
+    );
+  },
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: CustomDrawerItem(
+                  icon: Image.asset('assets/icons/logout.png',
+                      width: 25, height: 25),
+                  text: 'Sign out',
+                  onTap: () {
+                    context.read<AuthBloc>().add(
+                          LogoutEvent(),
+                        );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }));
+  }
+}
+
+class CustomDrawerItem extends StatelessWidget {
+  final Image icon;
+  final String text;
+  final GestureTapCallback onTap;
+
+  CustomDrawerItem({
+    required this.icon,
+    required this.text,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 12.0),
+        child: Row(
+          children: [
+            icon,
+            SizedBox(width: 16),
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 15,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

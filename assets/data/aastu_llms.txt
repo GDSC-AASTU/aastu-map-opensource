@@ -1,0 +1,173 @@
+ADDIS ABABA SCIENCE AND TECHNOLOGY UNIVERSITY (AASTU) - CONTEXT SUMMARY FOR LANGUAGE MODELS
+
+About AASTU:
+Addis Ababa Science and Technology University (AASTU) was established in 2011. It is one of Ethiopia's two science and technology universities, founded to support the country's economic transformation through science, engineering, and ICT. The university is located approximately 3.2 km north of Turinesh-Beijing Hospital in the Kilinto area of Akaki-Kality sub-city, Addis Ababa.
+
+Vision:
+To become an internationally recognized and respected hub of science and technology with strong national commitment and significant continental repute by 2025.
+
+Mission:
+AASTU aims to deliver high-quality education, research, and community service to address national development needs and contribute to Ethiopia's global scientific reputation.
+
+Leadership:
+President: Dereje Engida (PhD, CEng MiMechE)
+
+Organizational Structure:
+Includes a Board, President, Senate, Managing Council, Advisory Councils, and College/Department-level governance bodies.
+
+1.5 AASTU Management Offices:
+- Office of the President, Block 62, 3rd Floor
+- Vice President for Academic Affairs (VPAA), Block 62, 2nd Floor, Room 25
+- Vice President for Administration (VPAD), Block 62, 1st Floor
+- Vice President for Research and Technology Transfer (VPRTT), Block 62, 2nd Floor, Room 218
+- Vice President for Institutional Development and Business (VPIDB), Block 62, 4th Floor
+- University Registrar, Block 61, Ground Floor
+- Director for Student Affairs, Block 61, 1st Floor, Room 104
+- University Library, Block 44, Ground Floor
+- Director for Continuing Education, Block 61, 1st Floor, Room 108
+- Director of Research Affairs, Block 62, 2nd Floor, Room 217
+- Director for University-Industry Linkage, Block 62, 2nd Floor, Room 214
+- Director for Technology Transfer, Block 61, 2nd Floor
+- Director for ICT, Block 45, Ground Floor
+- Director for Academic Staff Affairs, Block 54, 2nd Floor, Room 211
+- Director for Quality Assurance, Block 61, 2nd Floor
+- Director for Gender and HIV AIDS, Block 54, 3rd Floor
+- Director for Finance, Block 62, Ground Floor
+- Director for Human Resource, Block 55, 1st Floor, Room 104
+- Director for Procurement, Block 62, 1st Floor
+- Office of General Services, Block 61, 2nd Floor, Room 217
+- Dean, College of Architecture and Civil Engineering, Block 63, 2nd Floor, Room 203
+- Dean, College of Electrical and Mechanical Engineering, Block 64, 2nd Floor, Room 202
+- Dean, College of Biological and Chemical Engineering, Block 73, 1st Floor, Room 110
+- Dean, College of Applied Sciences, Block 71, 1st Floor, Room 102
+- Dean, College of Natural & Social Sciences, Block 80, 2nd Floor, Room 208
+- Director for Graduate Programs, Block 62, 2nd Floor, Room 209
+- Director for Undergraduate Programs, Block 62, 2nd Floor, Room 206
+
+Colleges and Programs:
+1. College of Architecture and Civil Engineering
+   - Undergraduate: Architecture, Civil Engineering, Mining Engineering
+   - Graduate: MSc in Architecture (Interior Design, Architecture Design, Architecture Science), MSc in Civil Engineering (Structural, Geotechnical, Construction Tech & Management, Hydraulic, Road & Transport, Water Supply & Sanitary Engineering), PhD in Civil Engineering (same specializations)
+
+2. College of Electrical and Mechanical Engineering
+   - Undergraduate: Electrical & Computer, Mechanical, Electromechanical, Software Engineering
+   - Graduate: MSc and PhD in all listed disciplines
+
+3. College of Biological and Chemical Engineering
+   - Undergraduate: Biotechnology, Chemical Engineering, Environmental Engineering
+   - Graduate: MSc and PhD in respective disciplines and specialization areas
+
+4. College of Applied Sciences
+   - Undergraduate: Geology, Industrial Chemistry, Food Science & Nutrition
+   - Graduate: MSc and PhD in geological and chemical sciences
+
+5. College of Natural and Social Sciences
+   - Undergraduate: Mathematics, Languages, Physics & Statistics, Pre-Engineering, Social Sciences
+   - Graduate: MBA in Construction and Industrial Management
+
+Building Locations:
+- Central administrative offices are located in Block 62 (President, VP Offices, Registrar).
+- Each college has designated blocks with specific room numbers.
+- Library: Block 44
+- Gender & HIV Office: Block 54
+- ICT: Block 45
+
+Admissions:
+- Undergraduate admission based on Ethiopian Higher Education Entrance Exam (EHEE) and STU entrance exam.
+- Graduate programs require a Bachelor’s degree (minimum CGPA: 2.75 for males, 2.5 for females). PhD candidates need a thesis-based Master’s degree.
+
+Student Demographics:
+- AASTU hosts students from all regions of Ethiopia, promoting linguistic and cultural diversity.
+
+Grade Calculation:
+- GPA = Total Grade Points / Total Credit Hours
+- Grading Scale (Undergrad): A+ (4.0), A (4.0), A- (3.75) ... down to F (0)
+- CGPA of 2.0 or above required for good academic standing
+- Graduate students require a CGPA of 3.0+ to graduate
+
+Academic Status:
+- Warnings and probation apply based on SGPA/CGPA thresholds.
+- Students can be dismissed for academic underperformance.
+
+Graduation Requirements:
+- Completion of required courses
+- CGPA ≥ 2.0 (Undergrad), ≥ 3.0 (Grad)
+- No “F” grades for undergraduates
+
+Research Centers & Focus:
+- Emphasis on applied sciences, engineering, ICT, technology transfer, and innovation
+- Research and University-Industry Linkage Offices are operational
+
+Student Services:
+- Social services include healthcare, cafeteria, shops, and counseling
+- Gender office supports female students and promotes inclusivity
+
+Registrar Office:
+- Manages academic records, registration, transcripts, graduation, and credentials
+- Contact: aasturegistrar@aastu.edu.et | Phone: +251-118-880253
+
+Special Locations (Title, Latitude, Longitude):
+- AASTU Registration office: 8.884913889878852, 38.81009171112947
+- AASTU Digital Library: 8.885322388930563, 38.81107794738104
+- AASTU Block 14 - Male Dorm: 8.8885341501204, 38.8103553395744
+- AASTU Block 11 - Male Dorm: 8.888429215546346, 38.81094897792048
+- AASTU Football Sport Field: 8.887636583767655, 38.80744783925604
+- AASTU Basketball Court: 8.886650944701193, 38.8081192385502
+- AASTU Student Cafeteria: 8.88761784540329, 38.810175161767916
+- Central Juice and Fast food: 8.888355526896353, 38.809727559762806
+- AASTU Block 12 - Male dorm: 8.887814031432011, 38.81058012361039
+- AASTU Block 9 - Male dorm: 8.887800661161224, 38.81148681849037
+- AASTU Block 10 - Male dorm: 8.887297047348147, 38.81133344721452
+- AASTU Block 7 - Female dorm: 8.887132147093977, 38.81186573575892
+- AASTU Block 8 - Female dorm: 8.886499286010203, 38.81150035125709
+- AASTU Engineering Library: 8.886049151739195, 38.81061170005608
+- Kibnesh Lounge | ክብነሽ ላውንጅ: 8.88637801130505, 38.8107219957865
+- Kibnesh : 8.88637801130505, 38.8107219957865
+- AASTU Block 58 - Class Room: 8.885612156620903, 38.80909791824414
+- AASTU Block 57 - Class Room: 8.885814883015927, 38.809332611527616
+- Block 81 - Office: 8.884826867522834, 38.807723857457674
+- AASTU Central Laboratory: 8.88447614514784, 38.808864265398626
+- AASTU Biotechnology Laboratory: 8.883848669393336, 38.80831890640785
+- Science and Technology Library: 8.884670948868008, 38.80946580778178
+- Chemical Engineering Laboratory: 8.88429992055655, 38.80957294212645
+- AASTU Registration office - Registrar: 8.884900895334788, 38.80991299667806
+- AASTU ICT Executive Office: 8.885450112428568, 38.810847746529
+- AASTU Block 6 - Female dorm: 8.885929765764292, 38.81174360435208
+- AASTU Block 4 - Female dorm: 8.885163910142136, 38.81235514800036
+- AASTU Block 3 - Female dorm: 8.885572013328868, 38.81262068668604
+- AASTU Block 1 - Female dorm: 8.884792906838808, 38.812972056066776
+- AASTU Block 2 - Female dorm: 8.884565004630753, 38.812754797142134
+- AASTU's warehouse: 8.884199300776158, 38.81363992609658
+- AASTU Car Wash: 8.884024398811015, 38.81321077266518
+- AASTU Teachers' Lounge | አአሳቴዩ መምህራን ላውንጅ: 8.884022414634291, 38.81181590277221
+- AASTU Student Affairs Office: 8.884515238036299, 38.811844351894564
+- AASTU Workers' Lounge | አአሳቴዩ ሰራተኞች ላውንጅ: 8.883739982367462, 38.811759894186004
+- AASTU Department of Engineering Block 64: 8.88352715781234, 38.8107361410716
+- AASTU LT Block 47 | አአሳቴዩ ብሎክ 47: 8.883989062865805, 38.8109579932726
+- Lecture Teather: 8.883989062865805, 38.8109579932726
+- College of Architecture and Civil Engineering: 8.883663777730579, 38.81032754368786
+- College of Applied Science: 8.88319569473578, 38.80955492392503
+- AASTU Innovation Center: 8.883086747345514, 38.809241856218485
+- Geology Laboratory: 8.883171076880751, 38.80917026972871
+- AASTU Administration Building: 8.88434842809481, 38.81036358568583
+
+Official Website Important Pages (Title/Description - Link):
+
+AASTU Registrar and Alumni Office - https://www.aastu.edu.et/registrar/
+
+Information Communication Technology (ICT) Directorate - https://www.aastu.edu.et/ict/
+
+Research Directorate - https://www.aastu.edu.et/research/
+
+College of Social Science and Humanities - https://www.aastu.edu.et/cssh/
+
+AASTU Library related Info - https://www.aastu.edu.et/library/
+
+Hungary Scholarship Program - https://www.aastu.edu.et/hungary/
+
+Announcements - https://www.aastu.edu.et/announcement/
+
+Blog - https://www.aastu.edu.et/blog/
+
+---
+End of Summary

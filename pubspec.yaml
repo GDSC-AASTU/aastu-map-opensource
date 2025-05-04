@@ -1,0 +1,175 @@
+name: aastu_map
+description: "Addis Ababa Science and Technology Unviersity Campus Map Tour and Guide App"
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.1+2
+
+environment:
+  sdk: ">=3.4.3 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI Related
+  smooth_page_indicator: ^1.2.1
+  cupertino_icons: ^1.0.6
+  carousel_slider: ^5.0.0
+  flutter_svg: ^2.0.10+1
+  page_transition: ^2.1.0
+  animated_splash_screen: ^1.3.0
+  go_router: ^14.1.3
+  google_nav_bar: ^5.0.6
+  fluttertoast: ^8.2.8
+  line_icons: ^2.0.3
+  ionicons: ^0.2.2
+  lottie: ^3.1.3
+  gap: ^3.0.1
+  animated_text_kit: ^4.2.2
+
+  # Web and Launcher
+  url_launcher: ^6.3.1
+  webview_flutter: ^4.8.0
+
+  # Language and Rating
+  intl: ^0.19.0
+
+  # Image related
+  path_provider: ^2.1.3
+  cached_network_image: ^3.4.1
+  http: ^1.2.0
+  image_picker: ^1.0.0
+  panorama_viewer: ^1.0.6
+
+  # Font Related
+  google_fonts: ^6.2.1
+
+  # Firebase Related
+  googleapis_auth: ^1.6.0
+  firebase_storage: ^12.1.1
+  firebase_core: ^3.3.0
+  cloud_firestore: ^5.2.1
+  firebase_auth: ^5.1.4
+  firebase_messaging: ^15.0.4
+  firebase_app_check: ^0.3.0+4
+  firebase_crashlytics: ^4.0.4
+  firebase_analytics: ^11.2.1
+
+  # Map View Related
+  google_maps_flutter: ^2.10.1
+  flutter_map: ^6.2.1
+
+  # State Management
+  equatable: ^2.0.7
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.6
+
+  # Authentication
+  google_sign_in: ^6.2.2
+
+  # Storage
+  shared_preferences: ^2.5.3
+  pin_code_fields: ^8.0.1
+  device_info_plus: ^11.3.0
+  internet_connection_checker: ^3.0.1
+  package_info_plus: ^8.3.0
+  flutter_confetti: ^0.5.1
+  hive_flutter: ^1.1.0
+  share_plus: ^11.0.0
+  flutter_linkify: ^6.0.0
+  any_link_preview: ^3.0.3
+  flutter_markdown: ^0.7.7
+  emoji_picker_flutter: ^4.3.0
+  geolocator: ^14.0.0
+ 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.9
+  hive_generator: ^2.0.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo_quality.jpg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/images/logo_quality.jpg"
+  remove_alpha_ios: true
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
+    - assets/logo.png
+    - assets/icons/
+    - assets/anim/
+    - assets/clubs/
+    - assets/images/
+    - assets/images/team/
+    - assets/images/google_icon.png
+    - assets/images/phone.png
+    - assets/data/
+    - assets/images/signup_bg.jpg
+    - assets/images/aastu.png
+    - assets/images/logo_quality_transparent.png
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat/Montserrat-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Montserrat/Montserrat-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Montserrat/Montserrat-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Montserrat/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Montserrat/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat/Montserrat-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Montserrat/Montserrat-Black.ttf
+          weight: 900
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

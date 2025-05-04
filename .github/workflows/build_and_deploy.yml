@@ -1,0 +1,105 @@
+name: CI/CD, Build, and Deploy
+
+on:
+  push:
+    branches:
+      - main
+  create:
+    tags:
+      - '*'
+
+jobs:
+  semantic-pull-request:
+    name: "Semantic Check"
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+
+
+  build-web:
+    name: "Build Flutter Web"
+    needs: semantic-pull-request
+    runs-on: ubuntu-latest
+    outputs:
+      environment: ${{ steps.set-env.outputs.environment }}
+      version: ${{ steps.extract_version.outputs.version }}
+    steps:
+      - name: 📚 Checkout repository
+        uses: actions/checkout@v3
+
+      - name: ☕ Setup JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version:  "${{ secrets.FLUTTER_VERSION || '3.4.4' }}"
+
+      - name: 🔢 Generate Short SHA
+        run: |
+          echo "SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-8)" >> $GITHUB_ENV
+          echo "SHORT_BASE_SHA=$(echo ${{ github.event.before }} | cut -c1-8)" >> $GITHUB_ENV
+          echo "SHORT_HEAD_SHA=$(echo ${{ github.event.after }} | cut -c1-8)" >> $GITHUB_ENV
+
+      - name: 🔍 Extract Version from pubspec.yaml
+        id: extract_version
+        run: |
+          VERSION=$(grep '^version: ' pubspec.yaml | sed 's/version: //')
+          VERSION_TAG=${VERSION%-*}
+          echo "VERSION=$VERSION_TAG" >> $GITHUB_ENV
+          echo "::set-output name=version::$VERSION_TAG"
+
+      - name: 🌍 Set Build Environment
+        id: set-env
+        run: echo "::set-output name=environment::Staging"
+
+      - name: 📦 Install Dependencies
+        run: flutter pub get
+
+      - name: 🛠️ Build Flutter Web
+        run: flutter build web
+
+      - name: ⬇️ Archive Build Files
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-web-build
+          path: build/web
+
+  deploy:
+    name: "Deploy to Firebase"
+    needs: build-web
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: ⬇️ Download Built Web Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: flutter-web-build
+          path: build/web
+
+      - name: 🎯 Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          projectId: "aastu-map-project"
+          channelId: "live"
+
+      - name: 🚀 Notify Team on Telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.STAGING_TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.STAGING_TELEGRAM_BOT_TOKEN }}
+          format: HTML
+          message: |
+            <i>New Commit Pushed to Main Branch</i>
+            <b>Project:</b> AASTU Map App
+            <b>Build Type:</b> ${{ needs.build-web.outputs.environment }}
+            <b>Commit:</b> <a href="https://github.com/${{ github.repository }}/commit/${{ env.SHORT_SHA }}">{{ env.SHORT_SHA }}</a>
+            📦 Web Build completed successfully.
+            📥 <b>URL:</b> <a href="https://aastu-map-project.web.app/">https://aastu-map-project.web.app/</a>
+            📦 Web build deployed successfully.

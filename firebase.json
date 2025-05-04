@@ -1,0 +1,39 @@
+{
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "aastu-map-project",
+          "appId": "1:746819413376:android:b53f285dc3dd8c7e4f0d65",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "aastu-map-project",
+          "configurations": {
+            "android": "1:746819413376:android:b53f285dc3dd8c7e4f0d65",
+            "ios": "1:746819413376:ios:e15197707e93e4c94f0d65",
+            "macos": "1:746819413376:ios:e15197707e93e4c94f0d65",
+            "web": "1:746819413376:web:7243254253b7da9e4f0d65",
+            "windows": "1:746819413376:web:008d3c0c01f9af2e4f0d65"
+          }
+        }
+      }
+    }
+  }
+}
