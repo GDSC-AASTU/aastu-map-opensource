@@ -8,7 +8,6 @@ import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 
 class PlaceDetail extends StatefulWidget {
@@ -30,6 +29,9 @@ class _PlaceDetailState extends State<PlaceDetail> {
   int _currentPage = 0;
   List<String> _images = [];
   double? _distanceInMeters;
+  
+  // Default AASTU location as fallback if we can't get current position
+  final LatLng _defaultLocation = LatLng(8.887741, 38.816044);
 
   @override
   void initState() {
@@ -53,37 +55,39 @@ class _PlaceDetailState extends State<PlaceDetail> {
 
   Future<void> _calculateDistance() async {
     try {
-      // Get the user's current location
-      Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high,
-      );
-
-      log('Current position: $position');
-
-      log(widget.place['location'].toString());
-
       // Get the destination coordinates
-
       final double destinationLat = widget.place['location']['lat'] as double;
       final double destinationLng = widget.place['location']['lng'] as double;
-
+      
       log('Destination coordinates: $destinationLat, $destinationLng');
-
-      // Calculate the distance
-      double distance = Geolocator.distanceBetween(
-        position.latitude,
-        position.longitude,
-        destinationLat,
-        destinationLng,
+      
+      // Create the destination point
+      final LatLng destination = LatLng(destinationLat, destinationLng);
+      
+      // Use default location (AASTU campus center)
+      final LatLng currentLocation = _defaultLocation;
+      
+      // Calculate distance using the Distance class from latlong2
+      final Distance distance = Distance();
+      final double distanceInMeters = distance.as(
+        LengthUnit.Meter,
+        currentLocation,
+        destination,
       );
-
+      
       // Update the state
       setState(() {
-        _distanceInMeters = distance;
+        _distanceInMeters = distanceInMeters;
       });
+      
+      log('Calculated distance: $distanceInMeters meters');
     } catch (e) {
-      // Handle errors (e.g., permissions denied)
-      print('Error calculating distance: $e');
+      // Handle errors
+      log('[LOG distance_calc] ========= Error calculating distance: $e');
+      // Set a fallback distance
+      setState(() {
+        _distanceInMeters = null;
+      });
     }
   }
 
@@ -497,9 +501,9 @@ class _PlaceDetailState extends State<PlaceDetail> {
                                     Text(
                                       _distanceInMeters != null
                                           ? _distanceInMeters! < 1000
-                                              ? '${_distanceInMeters!.toStringAsFixed(0)} m from you'
-                                              : '${(_distanceInMeters! / 1000).toStringAsFixed(2)} km from you'
-                                          : 'Calculating distance...',
+                                              ? '${_distanceInMeters!.toStringAsFixed(0)} m from campus center'
+                                              : '${(_distanceInMeters! / 1000).toStringAsFixed(2)} km from campus center'
+                                          : 'Distance from campus center',
                                       style: TextStyle(
                                         fontSize: 16,
                                         color: Colors.grey[700],

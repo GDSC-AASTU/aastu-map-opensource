@@ -82,7 +82,7 @@ dependencies:
   any_link_preview: ^3.0.3
   flutter_markdown: ^0.7.7
   emoji_picker_flutter: ^4.3.0
-  geolocator: ^14.0.0
+
  
 
 dev_dependencies:
