@@ -48,14 +48,14 @@ final routerDelegate = GoRouter(
       path: '/full_map',
       builder: (BuildContext context, GoRouterState state) => FullMapPage(),
     ),
-    GoRoute(
-      path: "/places/:imageUrl",
-      builder: (BuildContext context, GoRouterState state) {
-        final encodedImageUrl = state.pathParameters['imageUrl'];
-        final imageUrl = Uri.decodeComponent(encodedImageUrl!);
-        return PanoramaView(imageUrl: imageUrl);
-      },
-    ),
+    // GoRoute(
+    //   path: "/places/:imageUrl",
+    //   builder: (BuildContext context, GoRouterState state) {
+    //     final encodedImageUrl = state.pathParameters['imageUrl'];
+    //     final imageUrl = Uri.decodeComponent(encodedImageUrl!);
+    //     return PanoramaView(imageUrl: imageUrl);
+    //   },
+    // ),
     GoRoute(
       path: '/detail_page/:id',
       parentNavigatorKey: _rootNavigatorKey,

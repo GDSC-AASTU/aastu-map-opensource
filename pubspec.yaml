@@ -41,7 +41,7 @@ dependencies:
   cached_network_image: ^3.4.1
   http: ^1.2.0
   image_picker: ^1.0.0
-  panorama_viewer: ^1.0.6
+  # panorama_viewer: ^2.0.4
 
   # Font Related
   google_fonts: ^6.2.1

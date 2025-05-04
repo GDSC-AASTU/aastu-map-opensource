@@ -334,14 +334,14 @@ class _PlaceDetailState extends State<PlaceDetail> {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PanoramaView(
-                            imageUrl: _images[index],
-                          ),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => PanoramaView(
+                      //       imageUrl: _images[index],
+                      //     ),
+                      //   ),
+                      // );
                     },
                     child: Stack(
                       fit: StackFit.expand,
