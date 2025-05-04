@@ -1,5 +1,20 @@
 # Welcome to the AASTU MAP Project 🗺️
 
+## Contributors 👥
+<div align="center">
+  <a href="https://github.com/chisa-dev"><img src="https://avatars.githubusercontent.com/u/44440394?s=96&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/DagmMesfin"><img src="https://avatars.githubusercontent.com/u/101246148?s=96&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/mihretgold"><img src="https://avatars.githubusercontent.com/u/102969913?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/enkutatash"><img src="https://avatars.githubusercontent.com/u/112767747?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="#"><img src="https://avatars.githubusercontent.com/u/112767747?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/resourceful-nebil"><img src="https://avatars.githubusercontent.com/u/122722078?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/Young19ermi"><img src="https://avatars.githubusercontent.com/u/111576904?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/Fasikagebrehana"><img src="https://avatars.githubusercontent.com/u/105711954?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/natiyeshi"><img src="https://avatars.githubusercontent.com/u/93379520?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/Sefukamil20R"><img src="https://avatars.githubusercontent.com/u/130300957?s=96&v=4" width="60" height="60" style="border-radius:50%"/></a>
+  <a href="https://github.com/Mihretthe"><img src="https://avatars.githubusercontent.com/u/115806991?s=64&v=4" width="60" height="60" style="border-radius:50%"/></a>
+</div>
+
 ## Description 📝
 This Flutter project aims to provide a full virtual guide experience for visitors and students at Addis Ababa Science and Technology University. Developed by members of the Google Developer Students Club, the app includes detailed maps and features to enhance campus navigation.
 
